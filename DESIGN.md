@@ -346,6 +346,46 @@ python -m eval.eval_runner --golden
 python -m eval.eval_runner --cases q1,q3
 ```
 
+## Limitations & Future Work
+
+### Single-turn only (no conversation memory)
+
+Each call to `run_agent(query)` initializes a fresh message list. There is no shared state between questions, so the agent cannot handle follow-up references like "what else did she write?" after a previous answer. The interactive REPL in `demo.py` lets the user ask many questions sequentially, but each is answered in complete isolation.
+
+**Next step**: maintain a rolling conversation buffer and pass prior turns into each `messages` list, enabling contextual follow-ups within a session.
+
+### Wikipedia-only knowledge source
+
+The agent can only answer questions that have a Wikipedia article. Questions about very recent events (post Wikipedia's last edit), niche topics with no article, or highly localized information will fail silently or return a "unable to find" response. The system has no fallback to other knowledge sources.
+
+**Next step**: add additional retrieval tools (e.g. news APIs, domain-specific databases) and let the agent choose the right source based on question type.
+
+### English Wikipedia only
+
+The client is hardcoded to `en.wikipedia.org`. Questions best answered by non-English Wikipedia editions (e.g. regional history, local figures) may return incomplete or no results.
+
+**Next step**: detect question language or topic region and route to the appropriate Wikipedia edition.
+
+### Extract truncation may lose answer-bearing text
+
+Each article is truncated to `WIKI_MAX_EXTRACT_CHARS` (6,000 characters) before being passed to the LLM. For long articles, the answer may appear in a section that gets cut off, causing the agent to either search again or admit it cannot find the information.
+
+**Next step**: implement section-aware retrieval — identify which section headings are relevant and fetch only those sections, rather than truncating the full article top-down.
+
+### No real-time or dynamic content
+
+Wikipedia is a static snapshot. The agent cannot answer questions that depend on live data such as current prices, scores, weather, or breaking news. Attempts to do so are correctly declined, but no real-time fallback is offered.
+
+**Next step**: integrate a real-time data tool (e.g. a search API or structured data feed) for time-sensitive queries.
+
+### Eval cost (LLM-as-a-Judge)
+
+Running the full 30-question golden test set triggers three LLM judge calls per query (query hallucination, answer hallucination, semantic correctness), tripling the API cost of each eval run relative to agent-only cost. Judge costs are currently not separated from agent costs in the metrics output.
+
+**Next step**: track and report judge token usage and cost separately; explore caching judge verdicts for re-runs where only the agent changed.
+
+---
+
 ## Dependencies
 
 | Package | Purpose |
