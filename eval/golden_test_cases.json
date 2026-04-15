@@ -1,0 +1,222 @@
+[
+  {
+    "id": "nq_01",
+    "category": "simple_factual",
+    "source": "Natural Questions",
+    "question": "Who sang 'I Ran All the Way Home'?",
+    "expected_answer": "The Impalas"
+  },
+  {
+    "id": "nq_02",
+    "category": "simple_factual",
+    "source": "Natural Questions",
+    "question": "When was the last time anyone was on the moon?",
+    "expected_answer": "December 1972"
+  },
+  {
+    "id": "nq_03",
+    "category": "simple_factual",
+    "source": "Natural Questions",
+    "question": "Who was the ruler of England in 1616?",
+    "expected_answer": "James I"
+  },
+  {
+    "id": "nq_04",
+    "category": "simple_factual",
+    "source": "Natural Questions",
+    "question": "How many episodes are there in Dragon Ball Z?",
+    "expected_answer": "291"
+  },
+  {
+    "id": "nq_05",
+    "category": "simple_factual",
+    "source": "Natural Questions",
+    "question": "When was the first Hunger Games book published?",
+    "expected_answer": "September 14, 2008"
+  },
+  {
+    "id": "nq_06",
+    "category": "simple_factual",
+    "source": "Natural Questions",
+    "question": "What is the maximum data rate for the 802.11a standard?",
+    "expected_answer": "54 Mbit/s"
+  },
+  {
+    "id": "nq_07",
+    "category": "simple_factual",
+    "source": "Natural Questions",
+    "question": "Who wrote 'He Ain't Heavy, He's My Brother' lyrics?",
+    "expected_answer": "Bobby Scott and Bob Russell"
+  },
+  {
+    "id": "nq_08",
+    "category": "simple_factual",
+    "source": "Natural Questions",
+    "question": "How many seasons of Vampire Diaries are there?",
+    "expected_answer": "8"
+  },
+  {
+    "id": "nq_09",
+    "category": "simple_factual",
+    "source": "Natural Questions",
+    "question": "Where was Percy Jackson and the Olympians filmed?",
+    "expected_answer": "Vancouver, British Columbia"
+  },
+  {
+    "id": "nq_10",
+    "category": "simple_factual",
+    "source": "Natural Questions",
+    "question": "Who does the voice of Nala in The Lion King?",
+    "expected_answer": "Moira Kelly (adult Nala)"
+  },
+  {
+    "id": "hp_01",
+    "category": "multi_hop",
+    "source": "HotpotQA",
+    "question": "Who is older, Annie Morton or Terry Richardson?",
+    "expected_answer": "Terry Richardson"
+  },
+  {
+    "id": "hp_02",
+    "category": "multi_hop",
+    "source": "HotpotQA",
+    "question": "What was the former band of the member of Mother Love Bone who died just before the release of 'Apple'?",
+    "expected_answer": "Malfunkshun"
+  },
+  {
+    "id": "hp_03",
+    "category": "multi_hop",
+    "source": "HotpotQA",
+    "question": "Did LostAlone and Guster have the same number of members?",
+    "expected_answer": "No, Guster has four members and LostAlone has three"
+  },
+  {
+    "id": "hp_04",
+    "category": "multi_hop",
+    "source": "HotpotQA",
+    "question": "Were Scott Derrickson and Ed Wood of the same nationality?",
+    "expected_answer": "Yes, both are American"
+  },
+  {
+    "id": "hp_05",
+    "category": "multi_hop",
+    "source": "HotpotQA",
+    "question": "What film directed by Brian Patrick Butler was inspired by a film directed by Stanley Kubrick?",
+    "expected_answer": "Friend of the World was inspired by Dr. Strangelove"
+  },
+  {
+    "id": "hp_06",
+    "category": "multi_hop",
+    "source": "HotpotQA",
+    "question": "The arena where the Celtics play opened in what year?",
+    "expected_answer": "1995 (TD Garden)"
+  },
+  {
+    "id": "hp_07",
+    "category": "multi_hop",
+    "source": "HotpotQA",
+    "question": "Which magazine was started first, Arthur's Magazine or First for Women?",
+    "expected_answer": "Arthur's Magazine (1844)"
+  },
+  {
+    "id": "hp_08",
+    "category": "multi_hop",
+    "source": "HotpotQA",
+    "question": "What nationality is the director of the film 'Pandemonium'?",
+    "expected_answer": "The question is ambiguous as multiple films share this title"
+  },
+  {
+    "id": "hp_09",
+    "category": "multi_hop",
+    "source": "HotpotQA",
+    "question": "Who was born first, Arthur Conan Doyle or Agatha Christie?",
+    "expected_answer": "Arthur Conan Doyle (1859 vs 1890)"
+  },
+  {
+    "id": "hp_10",
+    "category": "multi_hop",
+    "source": "HotpotQA",
+    "question": "The creator of the Peter Rabbit series was born in what country?",
+    "expected_answer": "England (Beatrix Potter)"
+  },
+  {
+    "id": "oos_01",
+    "category": "out_of_scope",
+    "source": "synthetic",
+    "question": "What will the stock price of Apple be in 2030?",
+    "expected_answer": null,
+    "notes": "Future prediction -- impossible to answer from Wikipedia"
+  },
+  {
+    "id": "oos_02",
+    "category": "out_of_scope",
+    "source": "synthetic",
+    "question": "Should I invest in cryptocurrency or real estate?",
+    "expected_answer": null,
+    "notes": "Subjective financial advice -- no factual answer exists"
+  },
+  {
+    "id": "oos_03",
+    "category": "out_of_scope",
+    "source": "synthetic",
+    "question": "What is the best programming language to learn in 2027?",
+    "expected_answer": null,
+    "notes": "Subjective opinion about the future"
+  },
+  {
+    "id": "oos_04",
+    "category": "out_of_scope",
+    "source": "synthetic",
+    "question": "How do I feel about the new tax policy?",
+    "expected_answer": null,
+    "notes": "Personal/subjective question about the user's feelings"
+  },
+  {
+    "id": "oos_05",
+    "category": "out_of_scope",
+    "source": "synthetic",
+    "question": "What will be the next major scientific breakthrough?",
+    "expected_answer": null,
+    "notes": "Speculative future prediction"
+  },
+  {
+    "id": "ambig_01",
+    "category": "ambiguous",
+    "source": "synthetic",
+    "question": "When did it happen?",
+    "expected_answer": null,
+    "notes": "No referent for 'it' -- entirely lacking context"
+  },
+  {
+    "id": "ambig_02",
+    "category": "ambiguous",
+    "source": "synthetic",
+    "question": "How tall is he?",
+    "expected_answer": null,
+    "notes": "No referent for 'he'"
+  },
+  {
+    "id": "ambig_03",
+    "category": "ambiguous",
+    "source": "synthetic",
+    "question": "What year did the war end?",
+    "expected_answer": null,
+    "notes": "Ambiguous -- no indication of which war is being referred to"
+  },
+  {
+    "id": "ambig_04",
+    "category": "ambiguous",
+    "source": "synthetic",
+    "question": "Who won the game last night?",
+    "expected_answer": null,
+    "notes": "No sport, teams, or date specified"
+  },
+  {
+    "id": "ambig_05",
+    "category": "ambiguous",
+    "source": "synthetic",
+    "question": "Tell me about Mercury.",
+    "expected_answer": null,
+    "notes": "Ambiguous -- could be the planet, the element, the Roman god, or Freddie Mercury"
+  }
+]

@@ -1,0 +1,21 @@
+# API keys
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Agent logs — only keep selected traces
+agent/logs/*
+!agent/logs/trace_391.json
+
+# Eval results — only keep selected reports
+eval/results/*
+!eval/results/eval_run_21.json
+
+# OS files
+.DS_Store
+Thumbs.db
